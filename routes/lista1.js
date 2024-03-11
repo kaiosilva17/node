@@ -23,16 +23,33 @@ router.post('/ex1', function (req, res) {
         const media = (n1 + n2 + n3 + n4) / 4
 
         if (media >= 7) {
-            console.log("Aluno Aprovado!")
+            retorno = {
+                codigo: 'APROVADO',
+                mensagem: "O aluno foi aprovado"
+            }
+
+            res.status(200).json(retorno)
+
         } else if (media >= 5) {
-            console.log("Aluno de Recuperação!")
+            retorno = {
+                codigo: 'RECUPERACAO',
+                mensagem: "O aluno está de recuperação"
+            }
+
+            res.status(200).json(retorno)
+
         } else {
-            console.log("Aluno Reprovado!")
+            retorno = {
+                codigo: 'REPROVADO',
+                mensagem: "O aluno foi reprovado"
+            }
+
+            res.status(200).json(retorno)
+
         }
     }
 
 })
-
 
 router.post('/ex2', function (req, res) {
 
@@ -69,4 +86,31 @@ router.post('/ex2', function (req, res) {
 
 })
 
+router.post('/ex3', function (req, res) {
+
+})
+
+router.post('/ex4', function (req, res) {
+
+})
+
+router.post('/ex5', function (req, res) {
+
+})
+
+router.post('/ex6', function (req, res) {
+
+})
+
+router.post('/ex7', function (req, res) {
+
+})
+
+router.post('/ex8', function (req, res) {
+
+})
+
+router.post('/ex9', function (req, res) {
+
+})
 module.exports = router
